@@ -1,25 +1,31 @@
 //切換語言
-function changeLanguage(language) {
-  window.localStorage.setItem("index_language", language);
-  document.cookie = `index_language=${language}`;
-
-  const urls = location.href.split("/");
-  const isZh = !urls[urls.length - 1].includes("en");
-
-  if (language.includes("zh")) {
-    // 中文網址
-    if (!isZh) {
-      location.href = `../${urls[urls.length - 1]}`;
+//Jump Language
+jumpIndex();
+function jumpIndex() {
+  var language = (
+    navigator.language ||
+    navigator.userLanguage ||
+    navigator.browserLanguage ||
+    navigator.systemLanguage
+  ).toLowerCase();
+  if (document.cookie == "") {
+    // Is Local : use local storage
+    if (window.localStorage.getItem("index_language") != null) {
+      language = window.localStorage.getItem("index_language");
+      // return;
+    } else {
+      window.localStorage.setItem("index_language", language);
     }
   } else {
-    // 英文網址
-    if (isZh) {
-      location.href = `./en/${urls[urls.length - 1].replace(
-        ".html",
-        "_en.html"
-      )}`;
+    // Is Server : use browser cookie
+    if (typeof getCookie("index_language") !== "undefined") {
+      language = getCookie("index_language");
+      // return;
+    } else {
+      document.cookie = `index_language=${language}`;
     }
   }
+  changeLanguage(language);
 }
 
 function changeLanguage(language) {
