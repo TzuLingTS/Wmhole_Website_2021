@@ -1811,6 +1811,18 @@ footer .row {
   }
 
   /*產品服務*/
+  .product_overview_hero {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .product_overview_hero_txt {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
   .product_overview_hero_txt h3 {
     margin-top: 1.5em;
   }

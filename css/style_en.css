@@ -1514,6 +1514,11 @@ label {
   }
 
   /*GIC*/
+  .gic_pain_txt {
+    display: flex;
+    flex-direction: column;
+  }
+
   .gic_features_col {
     height: 20em;
     row-gap: 0;
@@ -1969,6 +1974,10 @@ label {
   }
 
   /*關於蟲洞*/
+  .about_us_hero {
+    padding: 5em 2em;
+  }
+
   .ceo,
   .cto {
     padding-top: 20%;
@@ -2073,6 +2082,12 @@ label {
   }
 
   /*IQC*/
+  .product_hero_section_txt {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    padding: 2em;
+  }
+
   .iqc_pain_list {
     padding: 3px 0;
   }
@@ -2156,6 +2171,11 @@ label {
     padding-bottom: 2em;
   }
 
+  .our_solution div {
+    width: 40%;
+    margin: 0 auto;
+  }
+
   /*關於蟲洞*/
   .our_sponsor_section {
     padding-bottom: 0;
@@ -2167,11 +2187,28 @@ label {
   }
 
   /*產品服務*/
+  .product_overview_hero .line_break {
+    padding-top: 1em;
+  }
+
   .product_overview_section .row {
     flex-direction: column;
     align-items: flex-start;
     max-width: 94%;
     margin: 0 auto;
+  }
+
+  .product_overview_hero_txt {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 0 10px;
+  }
+
+  .product_overview_section .row .column {
+    text-align: left;
+    padding-right: 0;
   }
 
   .product_overview_section .row .column p {
@@ -2199,8 +2236,51 @@ label {
     padding-top: 30px;
   }
 
+  .product_overview_product_info_section {
+    padding: 30px 0;
+  }
+
   .product_info_btn .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     column-gap: 1em;
+    row-gap: 1em;
+  }
+
+  .product_info_btn .row > *:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .product_info_btn .row > *:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .product_info_btn .row > *:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .product_info_btn .row > *:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .product_info_btn .row > *:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   .product_info_box {
@@ -2214,6 +2294,18 @@ label {
   /*GPM*/
   .gpm_pains_col {
     padding: 30px 20px;
+  }
+
+  .gpm_pains_section .column {
+    flex-direction: column;
+  }
+
+  .gpm_pains_col .column {
+    width: 100%;
+  }
+
+  .gpm_pain_img {
+    max-width: 10em;
   }
 
   .gpm_whats_more_section,
@@ -2274,7 +2366,7 @@ label {
   }
 
   .gic_features_col {
-    height: 18em;
+    height: 19em;
   }
 
   /*Sign UP*/
