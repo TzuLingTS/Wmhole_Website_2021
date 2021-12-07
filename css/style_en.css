@@ -1581,6 +1581,10 @@ label {
     text-align: center;
   }
 
+  .main_solution_brief .column > :nth-child(1) {
+    justify-content: center;
+  }
+
   .slogan {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1952,7 +1956,7 @@ label {
   }
 
   .main_last_quote {
-    font-size: 1.8em;
+    font-size: 1.5em;
     padding: 8%;
   }
 
@@ -1976,6 +1980,10 @@ label {
 
   .our_sponsor_img {
     margin-bottom: -150px;
+  }
+
+  .client_industry_section .row {
+    flex-direction: column;
   }
 
   /*產品*/
@@ -2130,6 +2138,15 @@ label {
     background-size: cover;
   }
 
+  .main_solution_brief > :nth-child(3),
+  .main_solution_brief > :nth-child(4) {
+    margin-left: 0;
+  }
+
+  .main_solution_brief .column > :nth-child(1) {
+    justify-content: center;
+  }
+
   .our_advantages_section {
     width: 80%;
     margin: 0 auto;
@@ -2137,6 +2154,11 @@ label {
 
   .client {
     padding-bottom: 2em;
+  }
+
+  /*關於蟲洞*/
+  .our_sponsor_section {
+    padding-bottom: 0;
   }
 
   /*產品*/
