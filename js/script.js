@@ -50,6 +50,14 @@ function changeLanguage(language) {
   }
 }
 
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop().split(";").shift();
+  }
+}
+
 //Scorlling Animation
 let aosItems = [...document.querySelectorAll(".aos_target")];
 console.log(aosItems);
