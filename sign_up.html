@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="蟲洞科技｜綠色工業雲平台｜GPM｜CMRT｜IQC｜GIC｜Light MES"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>開始行動 | Wormhole Tech</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--網頁menu-->
+    <!--網頁content-->
+    <main class="sign_up_main">
+      <!--公司logo-->
+      <div class="column sign_up_logo_wrap">
+        <a href="index.html">
+          <div>
+            <img
+              src="img/header/wm_logo.png"
+              alt="蟲洞logo"
+              class="sign_up_wm_logo"
+            />
+          </div>
+        </a>
+      </div>
+      <!--表單-->
+      <div class="sign_up_section">
+        <div class="form_wrap">
+          <h2>讓我們開始為您的公司串連<span>更多企業價值鏈！</span></h2>
+          <form class="sign_up_form" id="emailFormValue">
+            <div>
+              <label>聯絡人<span class="required_mark"> *</span></label
+              ><br />
+              <input
+                type="text"
+                placeholder="例如：John Du"
+                class="input_border required"
+                required="required"
+                autofocus
+                id="name_input"
+              />
+            </div>
+            <div>
+              <label>郵件地址<span class="required_mark"> *</span></label
+              ><br />
+              <input
+                type="email"
+                placeholder="例如：username@gmail.com"
+                class="input_border required"
+                required="required"
+                id="email_input"
+              />
+            </div>
+            <div>
+              <label>公司名稱<span class="required_mark"> *</span></label
+              ><br />
+              <input
+                type="text"
+                placeholder="例如：蟲洞科技股份有限公司"
+                class="input_border required"
+                required="required"
+                id="company_input"
+              />
+            </div>
+            <div>
+              <label>公司電話<span class="required_mark"> *</span></label
+              ><br />
+              <input
+                type="tel"
+                placeholder="例如：03-5508106"
+                class="input_border required"
+                required="required"
+                id="tel_input"
+              />
+            </div>
+            <div>
+              <label>分機<span class="required_mark"> *</span></label
+              ><br />
+              <input
+                type="number"
+                placeholder="例如：01"
+                class="input_border required"
+                required="required"
+                id="ext_input"
+              />
+            </div>
+            <div>
+              <label>有興趣的產品服務</label><br />
+              <select class="input_border" id="product_input">
+                <optgroup label="碳管理">
+                  <option value="cfpm">CFPM</option>
+                </optgroup>
+                <optgroup label="物料管理">
+                  <option value="gpm">GPM</option>
+                  <option value="cmrt">CMRT</option>
+                  <option value="gpm app">GPM APP</option>
+                </optgroup>
+                <optgroup label="生產管理">
+                  <option value="light_mes">Light MES</option>
+                  <option value="gic">GIC</option>
+                </optgroup>
+                <optgroup label="品質管理">
+                  <option value="iqc">IQC</option>
+                </optgroup>
+                <optgroup label="產品管理">
+                  <option value="green_book">Green Book</option>
+                </optgroup>
+              </select>
+            </div>
+          </form>
+          <p class="agreement" id="uncheck_mark">
+            <input type="checkbox" required="required" id="checkbox_required" />
+            我瞭解並同意蟲洞科技網站之<span
+              ><a href="privacy_policy.html" target="_blank">隱私權</a>及<a
+                href="terms_of_use.html"
+                target="_blank"
+                required="required"
+                >網站服務條款</a
+              >
+            </span>
+          </p>
+        </div>
+        <div class="row">
+          <div>
+            <button class="return_btn" onclick="historyBack()">
+              取消並返回
+            </button>
+          </div>
+          <div>
+            <button
+              class="sign_up_btn"
+              onclick="formRequiredValue()"
+              id="mailTo"
+            >
+              確認並送出
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--表單填寫成功通知-->
+      <div class="submit_popup_section hidden">
+        <div class="column">
+          <div class="column sumbit_icon_col">
+            <div class="column">
+              <img
+                src="img/submit_form/submit_success@2.png"
+                alt="資料填寫成功！"
+                class="submit_success_img"
+              />
+            </div>
+            <div class="column"><h3>資料填寫成功！</h3></div>
+          </div>
+          <div class="column sumbit_message_col">
+            <div class="column padding_bottom_50">
+              <h2 class="align_left">
+                蟲洞將於1-3個工作天內與您聯繫，或是撥打客服電話：<span
+                  class="primary_colour"
+                  >+886 35508106</span
+                >
+              </h2>
+            </div>
+            <div class="column">
+              <a href="index.html" class="back_to_index_btn">返回首頁</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/sign_up.js"></script>
+  </body>
+</html>
