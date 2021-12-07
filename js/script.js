@@ -4,8 +4,9 @@ function changeLanguage(language) {
   document.cookie = `index_language=${language}`;
 
   const urls = location.href.split("/");
-  const pageName = urls[urls.length - 1].replace("_en", "");
+  var pageName = urls[urls.length - 1].replace("_en", "");
   const isZh = !urls[urls.length - 1].includes("en");
+  pageName = pageName.includes(".html") ? pageName : "index.html";
 
   if (language.includes("zh")) {
     // 中文網址
