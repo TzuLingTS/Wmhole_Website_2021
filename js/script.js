@@ -8,23 +8,30 @@ function jumpIndex() {
     navigator.browserLanguage ||
     navigator.systemLanguage
   ).toLowerCase();
-  if (document.cookie == "") {
-    // Is Local : use local storage
-    if (window.localStorage.getItem("index_language") != null) {
-      language = window.localStorage.getItem("index_language");
-      // return;
-    } else {
-      window.localStorage.setItem("index_language", language);
-    }
+
+  if (window.localStorage.getItem("index_language") != null) {
+    language = window.localStorage.getItem("index_language");
+    // return;
   } else {
-    // Is Server : use browser cookie
-    if (typeof getCookie("index_language") !== "undefined") {
-      language = getCookie("index_language");
-      // return;
-    } else {
-      document.cookie = `index_language=${language}`;
-    }
+    window.localStorage.setItem("index_language", language);
   }
+  // if (document.cookie == '') {
+  //   // Is Local : use local storage
+  //   if (window.localStorage.getItem('index_language') != null) {
+  //     language = window.localStorage.getItem('index_language');
+  //     // return;
+  //   } else {
+  //     window.localStorage.setItem('index_language', language);
+  //   }
+  // } else {
+  //   // Is Server : use browser cookie
+  //   if (typeof getCookie('index_language') !== 'undefined') {
+  //     language = getCookie('index_language');
+  //     // return;
+  //   } else {
+  //     document.cookie = `index_language=${language}`;
+  //   }
+  // }
   changeLanguage(language);
 }
 
