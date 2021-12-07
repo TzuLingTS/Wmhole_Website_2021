@@ -4,6 +4,29 @@ function changeLanguage(language) {
   document.cookie = `index_language=${language}`;
 
   const urls = location.href.split("/");
+  const isZh = !urls[urls.length - 1].includes("en");
+
+  if (language.includes("zh")) {
+    // 中文網址
+    if (!isZh) {
+      location.href = `../${urls[urls.length - 1]}`;
+    }
+  } else {
+    // 英文網址
+    if (isZh) {
+      location.href = `./en/${urls[urls.length - 1].replace(
+        ".html",
+        "_en.html"
+      )}`;
+    }
+  }
+}
+
+function changeLanguage(language) {
+  window.localStorage.setItem("index_language", language);
+  document.cookie = `index_language=${language}`;
+
+  const urls = location.href.split("/");
   var pageName = urls[urls.length - 1].replace("_en", "");
   const isZh = !urls[urls.length - 1].includes("en");
   pageName = pageName.includes(".html") ? pageName : "index.html";
